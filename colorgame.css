@@ -18,3 +18,9 @@ h1{
     float: left;
     margin: 10px
 }
+
+#messageDisplay{
+    text-align: center;
+    color: white;
+    margin : 0 auto
+}
