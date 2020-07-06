@@ -19,6 +19,30 @@ var messageDisplay = document.querySelector("#messageDisplay")
 colorDisplay.textContent = pickedColor
 var h1 = document.querySelector("h1");
 
+//New colors button
+
+var reset = document.getElementById("reset");
+
+//New colors events
+
+reset.addEventListener("click",function(){
+   
+    //gen new colors;
+   colors = generateRandomColors(6);
+
+   //new correct color
+   pickedColor =  colors[Math.floor(Math.random()* colors.length)];
+    //change color display
+
+    colorDisplay.textContent = pickedColor;
+    //reflect colors
+   
+    for(var i=0;i<colors.length;i++){
+        sqaure[i].style.backgroundColor = colors[i];    
+    }
+
+    h1.style.backgroundColor = "#232323";
+});
 
 for(var i = 0;i<6;i++){
     sqaure[i].style.backgroundColor = colors[i];
@@ -28,6 +52,9 @@ for(var i = 0;i<6;i++){
             messageDisplay.textContent = "Correct";
             changeColors(this.style.backgroundColor);
             h1.style.backgroundColor = pickedColor;
+
+            //if win..change new colors to play again
+            reset.textContent = "Play Again";
         }
         else{
             //alert("Wrong");

@@ -19,8 +19,9 @@ h1{
     margin: 10px
 }
 
-#messageDisplay{
+#stripe{
+    background : white;
+    height: 30px;
     text-align: center;
-    color: white;
-    margin : 0 auto
+    color : black
 }
