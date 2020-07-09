@@ -1,14 +1,24 @@
 body{
     background-color: #232323;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    
 }
 
 h1{
+    margin: 0;
     color: white;
     text-align: center;
+    text-transform: uppercase;
+    padding:20px 0;
+    /* top bottom 20px left right  */
+    background: steelblue;
 }
+
 #container{
     width : 600px;
-    margin : 0 auto
+    margin : 20px auto
 }
 
 .square{
@@ -16,7 +26,12 @@ h1{
     background-color:purple;
     padding-bottom: 30%;
     float: left;
-    margin: 10px
+    margin: 10px;
+    /* for rounding the radius of border */
+    border-radius: 15%;
+    transition: background-color 0.6s;
+
+
 }
 
 #stripe{
@@ -30,3 +45,28 @@ h1{
 .selected {
     background-color: blue;
 }
+
+#colorDisplay{
+    font-size: 200%;
+}
+
+#messageDisplay{
+    display: inline-block;
+    width: 20%;
+}
+
+button{
+    /* for removing the background  */
+    background: none; 
+    /* for removing the border  */
+    border: none;
+    text-transform: uppercase;
+    font-size: inherit;
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    font-weight: 700;
+    color: steelblue;
+    transition: all 0.3s;
+}
+
+/* style span */

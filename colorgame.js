@@ -35,6 +35,9 @@ var hardBtn = document.getElementById("hardBtn");
 //New colors events
 
 reset.addEventListener("click",function(){
+    if(reset.textContent == "Play Again"){
+        reset.textContent = "New Colors";
+    }
    
     //gen new colors;
    colors = generateRandomColors(6);
@@ -81,6 +84,8 @@ easyBtn.addEventListener("click",function(){
 
 });
 
+//Hard Button
+
 hardBtn.addEventListener("click",function(){
     easyBtn.classList.remove("selected");
     hardBtn.classList.add("selected");
@@ -105,7 +110,7 @@ hardBtn.addEventListener("click",function(){
         }
 });
 
-//Hard Button
+
 
 
 for(var i = 0;i<6;i++){
